@@ -1,0 +1,21 @@
+﻿@using RssReading.Web.Models
+@model RssReading.Web.Models.IndexViewModel
+
+<div class="newsContent">
+	<h3>Новостная лента</h3>
+	<fieldset>
+		<form asp-controller="Rss" asp-action="filter" method="post" id="form" role="form" data-ajax="true" data-ajax-update="news">
+			<div>
+				<label for="source">Источник ленты: </label>
+				<select asp-for="Filter.SourceId" asp-items="Model.Sources"></select>
+			</div>
+			<div>
+				<input asp-for="Filter.Sort" type="radio" checked="checked" value="PublishDate:desc" /><label>Сортировать по дате</label>
+				<input asp-for="Filter.Sort" type="radio" value="Source.Name:asc" /><label>Сортировать по источнику</label>
+			</div>
+		</form>
+	</fieldset>
+
+	<div id="news">@Html.Partial("FilterRssItems", (FilterRssItemsViewModel)ViewBag.FilterRss)</div>
+</div>
+

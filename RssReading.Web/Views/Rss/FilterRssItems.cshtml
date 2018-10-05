@@ -1,0 +1,28 @@
+﻿@model RssReading.Web.Models.FilterRssItemsViewModel
+
+<div class="newsTable">
+	<table>
+		<caption>
+			@Html.Partial("_GetPaggingPartial", Model)
+		</caption>
+		<tr>
+			<th class="col1">Источник</th>
+			<th class="col2">Название новости</th>
+			<th class="col3">Описание новости</th>
+			<th class="col4">Дата публикации</th>
+		</tr>
+		@foreach (var rssItem in Model.RssItems)
+		{
+			<tr>
+				<td class="col1"><a href="@rssItem.Source.Link">@rssItem.Source.Name</a></td>
+				<td class="col2"><a href="@rssItem.Link">@rssItem.Title</a></td>
+				<td class="col3">@Html.Raw(rssItem.Description)</td>
+				@*<td>@rssItem.Description</td>*@
+				<td class="col4">@rssItem.PublishDate</td>
+			</tr>
+		}
+	</table>
+	@Html.Partial("_GetPaggingPartial", Model)
+</div>
+
+<script src="~/js/filterRssItems.js"></script>

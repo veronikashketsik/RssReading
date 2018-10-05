@@ -1,0 +1,133 @@
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+
+.newsContainer {
+	outline: 2px solid #060779; /* Синяя рамка */
+	max-width: 95%;
+	margin: auto;
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+.newsContent {
+	max-width: 95%;
+	margin: auto;
+}
+
+#form {
+	max-width: 95%;
+	margin: auto;
+}
+
+.newsTable {
+	/*max-width: 95%;*/
+	margin: auto;
+}
+
+.col1 {
+	width: 15%;
+}
+
+.col2 {
+	width: 20%;
+}
+
+.col3 {
+	width: 55%;
+}
+
+.col4 {
+	width: 10%;
+}
+
+TABLE {
+	height: auto;
+	border-collapse: collapse; /* Убираем двойные линии между ячейками */
+}
+
+TD, TH {
+	padding: 3px; /* Поля вокруг содержимого таблицы */
+	border: 1px solid rgb(220, 220, 220); /* Параметры рамки */
+	text-align: left; /* Выравнивание по левому краю */
+}
+
+.col1 {
+	width: 10%;
+	font-weight: bold;
+}
+
+.col2 {
+	width: 20%;
+}
+
+.col3 {
+	width: 60%;
+}
+
+.col4 {
+	width: 15%;
+	font-weight: bold;
+}
+
+select {
+	width: 40%;
+	margin: 4px 0;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+IMG {
+	width: 150px;
+	hight: 150px;
+	align: left
+}
+
+fieldset {
+	display: block;
+	padding-top: 1%;
+	padding-left: 1%;
+	padding-right: 1%;
+	border: 2px solid #ccc;
+	border-radius: 5px;
+	border-radius: 5px;
+	background-color: #f2f2f2;
+}
+
+CAPTION {
+	font-weight: bold;
+	align-content: center
+}
